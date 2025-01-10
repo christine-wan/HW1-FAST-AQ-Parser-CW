@@ -1,7 +1,7 @@
 [build-system]
 requires = [
 	"flit_core >=3.2,<4",
-	"python_version >= '3.7'"
+	#"python_version >= '3.7'"
 	]
 build-backend = "flit_core.buildapi"
 
@@ -12,7 +12,7 @@ pythonpath = [
 
 [project]
 name = "seqparser"
-authors = [{name = "Christine Wan", email = "christine.wan@ucsf.edu"}]
+authors = [{name = "Christine Wan", email = "christine.wan2@ucsf.edu"}]
 readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
@@ -20,6 +20,12 @@ dynamic = ["version", "description"]
 dependencies = [
     "pytest"
 ]
+
+requires = [
+	"flit_core >=3.2,<4"
+	]
+
+python_version = ">='3.7'"
 
 [project.urls]
 Home = "https://github.com/christine-wan/HW1-FAST-AQ-Parser-CW"
