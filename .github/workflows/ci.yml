@@ -1,10 +1,18 @@
 # .github/workflows/app.yaml
-name: Project Tests
-on: push
+name: HW1-FAST-AQ-Parser-CW
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests targeting the main branch
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
@@ -14,9 +22,11 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: Install package
+      - name: Upgrade pip and install the package
         run: |
-          pip install . 
-      - name: Test with pytest
+          python -m pip install --upgrade pip  
+          pip install .  
+
+      - name: Run tests with pytest
         run: |
           python -m pytest -vv tests/*py
