@@ -61,4 +61,4 @@ def test_reverse_transcribe():
 
     # Edge Case: Sequence with an invalid character (should raise an error)
     with pytest.raises(ValueError):
-        reverse_transcribe("HITONYX") # Invalid characters
+        reverse_transcribe("HITONY") # Invalid characters
